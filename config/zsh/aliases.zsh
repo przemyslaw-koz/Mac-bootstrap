@@ -23,3 +23,13 @@ alias gd='git diff'
 alias gl='git log --oneline --decorate --graph --all'
 alias gp='git push'
 alias gpsup='git push --set-upstream origin "$(git branch --show-current)"'
+alias k="kubectl"
+
+alias kgp="kubectl get pods"
+alias kgs="kubectl get svc"
+alias kgn="kubectl get nodes"
+alias kgd="kubectl get deployments"
+
+alias tf="terraform"
+
+alias h="helm"

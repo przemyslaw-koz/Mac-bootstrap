@@ -1,8 +1,8 @@
-# Command-line tools
+# Core CLI
 brew "git"
 brew "starship"
 
-# CLI essentials
+# Shell productivity
 brew "atuin"
 brew "eza"
 brew "bat"
@@ -12,9 +12,24 @@ brew "fzf"
 brew "zoxide"
 brew "jq"
 brew "yq"
+brew "tree"
+brew "watch"
+brew "wget"
 
 # Cloud
 brew "awscli"
+
+# Infrastructure as Code
+tap "hashicorp/tap"
+brew "hashicorp/tap/terraform"
+brew "ansible"
+
+# Kubernetes
+brew "kubectl"
+brew "helm"
+brew "k9s"
+brew "kubectx"
+brew "stern"
 
 # Applications
 cask "ghostty"
