@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -euo pipefail
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "Starting mac-bootstrap..."
 
@@ -19,5 +20,8 @@ fi
 
 echo "Homebrew version:"
 brew --version
+
+echo "Installing packages from Brewfile..."
+brew bundle --file "$SCRIPT_DIR/Brewfile"
 
 echo "Bootstrap completed."

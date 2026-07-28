@@ -1,0 +1,2 @@
+# Terminal emulator
+cask "ghostty"
