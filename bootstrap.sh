@@ -1,27 +1,54 @@
 #!/usr/bin/env bash
 
 set -euo pipefail
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-echo "Starting mac-bootstrap..."
+install_homebrew() {
+  if command -v brew >/dev/null 2>&1; then
+    echo "✓ Homebrew is already installed."
+    return
+  fi
 
-if ! command -v brew >/dev/null 2>&1; then
   echo "Installing Homebrew..."
 
   /bin/bash -c \
     "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-else
-  echo "Homebrew is already installed."
-fi
 
-if [[ -x /opt/homebrew/bin/brew ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv zsh)"
-fi
+  if [[ -x /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi
+}
 
-echo "Homebrew version:"
-brew --version
+configure_homebrew_environment() {
+  if [[ -x /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi
 
-echo "Installing packages from Brewfile..."
-brew bundle --file "$SCRIPT_DIR/Brewfile"
+  if ! command -v brew >/dev/null 2>&1; then
+    echo "Error: Homebrew is not available in PATH."
+    exit 1
+  fi
+}
 
-echo "Bootstrap completed."
+install_packages() {
+  echo "Installing packages from Brewfile..."
+  brew bundle --file "$SCRIPT_DIR/Brewfile"
+}
+
+main() {
+  echo "== mac-bootstrap =="
+
+  install_homebrew
+  configure_homebrew_environment
+
+  echo "Homebrew version:"
+  brew --version
+
+  install_packages
+
+  echo
+  echo "Bootstrap completed."
+}
+
+main "$@"
