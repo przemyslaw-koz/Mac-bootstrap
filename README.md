@@ -10,7 +10,7 @@ A new Mac should be configured from this repository with minimal manual work.
 
 ## Roadmap
 
-- [ ] Homebrew
+- [x] Homebrew
 - [ ] Ghostty
 - [ ] Git
 - [ ] tmux
