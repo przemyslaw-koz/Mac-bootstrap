@@ -46,6 +46,7 @@ main() {
   brew --version
 
   install_packages
+  "$SCRIPT_DIR/scripts/setup-symlinks.sh"
 
   echo
   echo "Bootstrap completed."
