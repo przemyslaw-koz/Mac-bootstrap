@@ -1,0 +1,36 @@
+[init]
+    defaultBranch = main
+
+[core]
+    editor = nano
+    autocrlf = input
+    whitespace = trailing-space,space-before-tab
+
+[pull]
+    rebase = false
+
+[push]
+    default = simple
+    autoSetupRemote = true
+
+[fetch]
+    prune = true
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = version:refname
+
+[diff]
+    algorithm = histogram
+    colorMoved = default
+
+[merge]
+    conflictStyle = zdiff3
+
+[rerere]
+    enabled = true
+
+[help]
+    autocorrect = prompt
