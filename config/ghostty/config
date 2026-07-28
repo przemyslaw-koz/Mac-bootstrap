@@ -1,0 +1,7 @@
+# Ghostty configuration managed by mac-bootstrap
+
+font-family = MesloLGM Nerd Font Mono
+font-size = 14
+
+window-padding-x = 10
+window-padding-y = 8
