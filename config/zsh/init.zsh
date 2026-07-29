@@ -1,6 +1,10 @@
 # Zsh configuration managed by mac-bootstrap
 
-ZSH_CONFIG_DIR="${0:A:h}"
+ZSH_CONFIG_DIR="${${(%):-%N}:A:h}"
+
+# Initialize Zsh completion system
+autoload -Uz compinit
+compinit
 
 source "$ZSH_CONFIG_DIR/aliases.zsh"
 source "$ZSH_CONFIG_DIR/functions.zsh"

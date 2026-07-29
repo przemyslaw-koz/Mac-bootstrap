@@ -1,6 +1,7 @@
 # Core CLI
 brew "git"
 brew "starship"
+brew "tmux"
 
 # Shell productivity
 brew "atuin"
