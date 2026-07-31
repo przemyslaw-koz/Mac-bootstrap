@@ -2,6 +2,7 @@
 brew "git"
 brew "starship"
 brew "tmux"
+brew "lazygit"
 
 # Shell productivity
 brew "atuin"

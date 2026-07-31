@@ -48,15 +48,16 @@ main() {
     "$REPO_DIR/config/ghostty/config" \
     "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
 
-  ensure_zsh_source \
-    "$REPO_DIR/config/zsh/starship.zsh"
-
   create_symlink \
     "$REPO_DIR/config/starship.toml" \
     "$HOME/.config/starship.toml"
 
   ensure_zsh_source \
     "$REPO_DIR/config/zsh/init.zsh"
+
+  create_symlink \
+    "$REPO_DIR/config/tmux/tmux.conf" \
+    "$HOME/.tmux.conf"
 
   echo "Symlinks configured."
 }
