@@ -3,6 +3,12 @@ brew "git"
 brew "starship"
 brew "tmux"
 brew "lazygit"
+brew "neovim"
+brew "make"
+brew "gcc"
+brew "unzip"
+brew "tree-sitter"
+brew "tree-sitter-cli"
 
 # Shell productivity
 brew "atuin"
@@ -35,6 +41,14 @@ brew "stern"
 
 # Applications
 cask "ghostty"
+cask "cursor"
 
 # Fonts
 cask "font-meslo-lg-nerd-font"
+
+# Language runtimes
+brew "node"
+brew "rust"
+
+# Infrastructure validation
+brew "tflint"

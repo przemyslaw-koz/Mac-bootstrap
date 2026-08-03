@@ -59,6 +59,10 @@ main() {
     "$REPO_DIR/config/tmux/tmux.conf" \
     "$HOME/.tmux.conf"
 
+  create_symlink \
+    "$REPO_DIR/config/nvim" \
+    "$HOME/.config/nvim"
+
   echo "Symlinks configured."
 }
 
