@@ -42,6 +42,7 @@ brew "stern"
 # Applications
 cask "ghostty"
 cask "cursor"
+cask "orbstack"
 
 # Fonts
 cask "font-meslo-lg-nerd-font"
