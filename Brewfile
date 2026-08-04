@@ -50,3 +50,6 @@ cask "font-meslo-lg-nerd-font"
 # Language runtimes
 brew "node"
 brew "rust"
+
+# Local AI
+brew "ollama"
