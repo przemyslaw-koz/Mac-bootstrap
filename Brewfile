@@ -49,6 +49,3 @@ cask "font-meslo-lg-nerd-font"
 # Language runtimes
 brew "node"
 brew "rust"
-
-# Infrastructure validation
-brew "tflint"
